@@ -13,6 +13,18 @@
           "production": true
         }
       }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        {
+          "target": "build:production",
+          "projects": "self"
+        }
+      ],
+      "options": {
+        "command": "cd dist/apps/api/ && yarn install --frozen-lockfile"
+      }
     }
   },
   "tags": []
