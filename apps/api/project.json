@@ -18,7 +18,7 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "nx run api:build:production",
+          "yarn nx run api:build:production",
           "yarn install --frozen-lockfile --cwd='dist/apps/api'"
         ],
         "parallel": false
