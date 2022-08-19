@@ -13,16 +13,6 @@
           "production": true
         }
       }
-    },
-    "deploy": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "yarn nx run api:build:production",
-          "yarn install --frozen-lockfile --cwd='dist/apps/api'"
-        ],
-        "parallel": false
-      }
     }
   },
   "tags": []
